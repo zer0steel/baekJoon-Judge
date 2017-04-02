@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import static java.lang.Integer.parseInt;
 
 /**
- * <a href="https://www.acmicpc.net/problem/9095">https://www.acmicpc.net/problem/9095</a>
+ * https://www.acmicpc.net/problem/9095
  * @author Jang
  * 2017. 4. 2.
  */
@@ -14,16 +14,14 @@ public class Bj9095 {
 		int dp[] = new int[12];
 		dp[1] = 1; dp[2] = 2; dp[3] = 4;
 		/* 
-		 * ¼ıÀÚ 4¸¦ ¿¹·Îµé¸é 4°¡ µÉ ¼ö ÀÖ´Â °æ¿ì´Â 
-		 * f(n) = nÀÇ ¼ıÀÚ°¡ µÉ ¼ö ÀÖ´Â °æ¿ìÀÇ ¼ö.
-		 * 1 + f(3) , 2 + f(2), 3 + f(1) 3Á¾·ù°¡ ÀÖ´Ù.
-		 * ¼ıÀÚµéÀÇ °³¼ö´Â 3°¡Áö °æ¿ì ÀüºÎ´Ù ¶È°°Áö¸¸ 
-		 * ¹®Á¦´Â ¼ıÀÚÀÇ ¼ø¼­±îÁö °í·ÁÇÏ¿© ¸ğµç °æ¿ìÀÇ¼ö ÀÌ±â ¶§¹®¿¡ ÀüºÎ ´õÇÑ´Ù.
-		 * Á¡È­½Ä : f(n) = f(n - 1) + f(n - 2) + f(n - 3); 
+		 * ìˆ«ì 4ë¥¼ ì˜ˆë¡œë“¤ë©´ 4ê°€ ë  ìˆ˜ ìˆëŠ” ê²½ìš°ëŠ” 
+		 * f(n) = nì˜ ìˆ«ìê°€ ë  ìˆ˜ ìˆëŠ” ê²½ìš°ì˜ ìˆ˜.
+		 * 1 + f(3) , 2 + f(2), 3 + f(1) 3ì¢…ë¥˜ê°€ ìˆë‹¤.
+		 * ë¬¸ì œëŠ” ìˆ«ìì˜ ìˆœì„œê¹Œì§€ ê³ ë ¤ ëª¨ë“  ê²½ìš°ì˜ìˆ˜ì´ê¸° ë•Œë¬¸ì— ì „ë¶€ ë”í•œë‹¤.
+		 * ì í™”ì‹ : f(n) = f(n - 1) + f(n - 2) + f(n - 3); 
 		 */
 		for(int i = 4; i <= 11; i++) 
-			dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];
-		
+			dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];		
 		StringBuilder sb = new StringBuilder();
 		while(T-- > 0) {
 			int n = parseInt(in.readLine().trim());
