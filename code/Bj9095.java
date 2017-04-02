@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import static java.lang.Integer.parseInt;
 
 /**
- * <a href="https://www.acmicpc.net/problem/9095">https://www.acmicpc.net/problem/9095</a>
+ * https://www.acmicpc.net/problem/9095
  * @author Jang
  * 2017. 4. 2.
  */
