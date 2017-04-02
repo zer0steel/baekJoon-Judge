@@ -10,6 +10,10 @@ import java.util.PriorityQueue;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * https://www.acmicpc.net/problem/1753
+ * @author Jang
+ */
 public class Bj1753 {
 	
 	private static final int INF = 100000000;
