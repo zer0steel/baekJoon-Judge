@@ -14,16 +14,14 @@ public class Bj9095 {
 		int dp[] = new int[12];
 		dp[1] = 1; dp[2] = 2; dp[3] = 4;
 		/* 
-		 * ¼ýÀÚ 4¸¦ ¿¹·Îµé¸é 4°¡ µÉ ¼ö ÀÖ´Â °æ¿ì´Â 
-		 * f(n) = nÀÇ ¼ýÀÚ°¡ µÉ ¼ö ÀÖ´Â °æ¿ìÀÇ ¼ö.
-		 * 1 + f(3) , 2 + f(2), 3 + f(1) 3Á¾·ù°¡ ÀÖ´Ù.
-		 * ¼ýÀÚµéÀÇ °³¼ö´Â 3°¡Áö °æ¿ì ÀüºÎ´Ù ¶È°°Áö¸¸ 
-		 * ¹®Á¦´Â ¼ýÀÚÀÇ ¼ø¼­±îÁö °í·ÁÇÏ¿© ¸ðµç °æ¿ìÀÇ¼ö ÀÌ±â ¶§¹®¿¡ ÀüºÎ ´õÇÑ´Ù.
-		 * Á¡È­½Ä : f(n) = f(n - 1) + f(n - 2) + f(n - 3); 
+		 * ìˆ«ìž 4ë¥¼ ì˜ˆë¡œë“¤ë©´ 4ê°€ ë  ìˆ˜ ìžˆëŠ” ê²½ìš°ëŠ” 
+		 * f(n) = nì˜ ìˆ«ìžê°€ ë  ìˆ˜ ìžˆëŠ” ê²½ìš°ì˜ ìˆ˜.
+		 * 1 + f(3) , 2 + f(2), 3 + f(1) 3ì¢…ë¥˜ê°€ ìžˆë‹¤.
+		 * ë¬¸ì œëŠ” ìˆ«ìžì˜ ìˆœì„œê¹Œì§€ ê³ ë ¤ ëª¨ë“  ê²½ìš°ì˜ìˆ˜ì´ê¸° ë•Œë¬¸ì— ì „ë¶€ ë”í•œë‹¤.
+		 * ì í™”ì‹ : f(n) = f(n - 1) + f(n - 2) + f(n - 3); 
 		 */
 		for(int i = 4; i <= 11; i++) 
-			dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];
-		
+			dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];		
 		StringBuilder sb = new StringBuilder();
 		while(T-- > 0) {
 			int n = parseInt(in.readLine().trim());
