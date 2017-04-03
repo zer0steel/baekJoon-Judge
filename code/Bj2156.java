@@ -28,10 +28,6 @@ public class Bj2156 {
 		 */
 		for(int i = 3; i <= n; i++) 
 			dp[i] = max(dp[i - 1], max(dp[i - 3] + wines[i - 1], dp[i - 2]) + wines[i]);
-		for(int i : dp)
-			if(i != 0)
-				System.out.println(i);
-		
 		System.out.println(dp[n]);
 	}
 	
