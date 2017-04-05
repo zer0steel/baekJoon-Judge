@@ -11,6 +11,11 @@ import java.util.PriorityQueue;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * https://www.acmicpc.net/problem/1916
+ * @author Jang
+ * 2017. 4. 5.
+ */
 public class Bj1916 {
 	private static int numOfVertex;
 	private static int numOfEdge;
